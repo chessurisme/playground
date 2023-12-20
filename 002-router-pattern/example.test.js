@@ -2,8 +2,15 @@
 
 import { responderv3 } from "./example-1.js";
 
-describe('router pattern for example 1', () => {
+let hikes = [
+  'Lost Lake',
+  'Canyon Creek Meadows',
+];
 
+let randomHike = () =>
+  hikes[Math.floor(Math.random() * hikes.length)];
+
+describe('router pattern for example 1', () => {
   // Returns the expected response for the 'list hikes' command.
   it('should return the expected response for the "list hikes" command', () => {
     const message = 'list hikes';
@@ -24,7 +31,6 @@ describe('router pattern for example 1', () => {
   it('should return the expected response for the "add hike" command when given a valid message', () => {
     const message = 'add hike Mount Everest';
     const hike = 'Mount Everest';
-    const hikes = [];
     const expectedResponse = `Added ${hike}!`;
     const actualResponse = responderv3(message);
     expect(actualResponse).toEqual(expectedResponse);
