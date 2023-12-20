@@ -1,0 +1,16 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "A test playground of Chessurisme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "test",
+    "playground",
+    "web-developing"
+  ],
+  "author": "Chessurisme",
+  "license": "MIT"
+}
