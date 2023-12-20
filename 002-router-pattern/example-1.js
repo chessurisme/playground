@@ -79,15 +79,15 @@ let randomHike = () =>
     // };
 
   // ? To fix this, we’ll convert responses to a list and use the `find` Array method to see which command the message starts with.
-let responderv3 = (message) => {
-    let [command, response] = Object.entries(responsesv3)
+let responder = (message) => {
+    let [command, response] = Object.entries(responses)
       .find(([command, response]) =>
         message.startsWith(command)
       );
     return response(message);
   };
 
-  let responsesv3 = [
+  let responses = [
     {
       command: 'list hikes',
       response: () => hikes.join('\n')
@@ -112,4 +112,4 @@ let responderv3 = (message) => {
   ];
 
 
-export { responderv3 }
+export { responder }
