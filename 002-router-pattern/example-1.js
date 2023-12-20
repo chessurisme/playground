@@ -79,7 +79,7 @@ console.log( responderv2('where is Mirror Lake') );
     // };
 
   // ? To fix this, we’ll convert responses to a list and use the `find` Array method to see which command the message starts with.
-  export let responderv3 = (message) => {
+let responderv3 = (message) => {
     let [command, response] = Object.entries(responsesv3)
       .find(([command, response]) =>
         message.startsWith(command)
