@@ -1,9 +1,5 @@
 "use strict";
 
-//*************/
-//* EXAMPLE 1 */
-//*************/
-
 function getSumv1(augend, addend){
   let sum = augend + addend;
   
@@ -35,3 +31,5 @@ getSumv1(-3, 3);
 getSumv2(-3, 3);
 getSumv1(43, -44);
 getSumv2(43, -44);
+
+export { getSumv2 };
