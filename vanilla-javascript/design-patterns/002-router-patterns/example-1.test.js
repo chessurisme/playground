@@ -1,11 +1,15 @@
 import { responder } from "./example-1.js";
 
+let randomHike = () =>
+  hikes[Math.floor(Math.random() * hikes.length)];
+
 describe('responder', () => {
   // Returns the correct response for a valid 'list hikes' command
   it('should return the correct response for a valid "list hikes" command', () => {
     const hikes = [
       'Lost Lake',
       'Canyon Creek Meadows',
+      'Mirror Lake'
     ];
 
     const message = 'list hikes';
