@@ -6,6 +6,7 @@ describe('responder', () => {
     const hikes = [
       'Lost Lake',
       'Canyon Creek Meadows',
+      'Mirror Lake'
     ];
 
     const message = 'list hikes';
@@ -20,6 +21,9 @@ describe('responder', () => {
       'Lost Lake',
       'Canyon Creek Meadows',
     ];
+
+    let randomHike = () =>
+      hikes[Math.floor(Math.random() * hikes.length)];
 
     const message = 'recommend hike';
     const expectedResponse = `I recommend ${randomHike()}`;
