@@ -3,6 +3,11 @@ import { responder } from "./example-1.js";
 describe('responder', () => {
   // Returns the correct response for a valid 'list hikes' command
   it('should return the correct response for a valid "list hikes" command', () => {
+    const hikes = [
+      'Lost Lake',
+      'Canyon Creek Meadows',
+    ];
+
     const message = 'list hikes';
     const expectedResponse = hikes.join('\n');
     const actualResponse = responder(message);
@@ -11,6 +16,11 @@ describe('responder', () => {
 
   // Returns the correct response for a valid 'recommend hike' command
   it('should return the correct response for a valid "recommend hike" command', () => {
+    const hikes = [
+      'Lost Lake',
+      'Canyon Creek Meadows',
+    ];
+
     const message = 'recommend hike';
     const expectedResponse = `I recommend ${randomHike()}`;
     const actualResponse = responder(message);
@@ -19,6 +29,7 @@ describe('responder', () => {
 
   // Adds a new hike to the list and returns the correct response for a valid 'add hike' command
   it('should add a new hike to the list and return the correct response for a valid "add hike" command', () => {
+    const hikes = [];
     const hike = 'New Hike';
     const message = `add hike ${hike}`;
     const expectedResponse = `Added ${hike}!`;
@@ -29,7 +40,6 @@ describe('responder', () => {
 
   // Returns an error message if 'hikes' array is empty and 'list hikes' command is received
   it('should return an error message if "hikes" array is empty and "list hikes" command is received', () => {
-    hikes = [];
     const message = 'list hikes';
     const expectedResponse = 'Sorry, I don\'t understand "list hikes".';
     const actualResponse = responder(message);
