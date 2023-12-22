@@ -1,3 +1,11 @@
+let hikes = [
+  'Lost Lake',
+  'Canyon Creek Meadows',
+];
+
+let randomHike = () =>
+  hikes[Math.floor(Math.random() * hikes.length)];
+
 let responses = [
   {
     command: /^list hikes$/,
