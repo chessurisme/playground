@@ -1,6 +1,6 @@
 let hikes = [
   'Lost Lake',
-  'Canyon Creek Meadows',
+  'Canyon Creek Meadows'
 ];
 
 let randomHike = () =>
@@ -44,4 +44,4 @@ console.log(responder('recommend hike'));
 console.log(responder('add hike Mirror Lake'));
 console.log(responder('where is Mirror Lake'));
 
-export { responder }
+export { responder, hikes }
