@@ -1,3 +1,11 @@
+let hikes = [
+  'Lost Lake',
+  'Canyon Creek Meadows'
+];
+
+let randomHike = () =>
+  hikes[Math.floor(Math.random() * hikes.length)];
+
 let responses = [
   {
     command: /^list hikes$/,
@@ -35,3 +43,5 @@ console.log(responder('list hikes'));
 console.log(responder('recommend hike'));
 console.log(responder('add hike Mirror Lake'));
 console.log(responder('where is Mirror Lake'));
+
+export { responder, hikes }
