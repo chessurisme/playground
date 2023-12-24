@@ -49,3 +49,5 @@ let responder = (message) => {
     command.exec(message).slice(1)
   );
 };
+
+export { responder, fruits };
