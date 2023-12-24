@@ -51,3 +51,8 @@ let responder = (message) => {
 };
 
 export { responder, fruits };
+
+console.log(responder('list fruits'));
+console.log(responder('recommend fruit'));
+console.log(responder('add fruit blueberry'));
+console.log(responder('what is your favorite?'));
