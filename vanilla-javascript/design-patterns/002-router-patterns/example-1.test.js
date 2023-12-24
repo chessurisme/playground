@@ -20,7 +20,7 @@ describe('Responder Function', () => {
 
   test('Recommend Hike Command', () => {
     const result = responder('recommend hike');
-    expect(result).toMatch(/^I recommend (Lost Lake|Canyon Creek Meadows)$/);
+    expect(result).toMatch(/^I recommend (Lost Lake|Canyon Creek Meadows|Mirror Lake)$/);
   });
 
   test('Add Hike Command', () => {
