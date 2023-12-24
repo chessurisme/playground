@@ -18,8 +18,8 @@ describe('Responder Function', () => {
     expect(result).toEqual(originalFruits.join('\n'));
   });
 
-  test('Random Fruit Command', () => {
-    const result = responder('random fruit');
+  test('Recommend Fruit Command', () => {
+    const result = responder('recommend fruit');
     expect(fruits).toContain(result);
   });
 
