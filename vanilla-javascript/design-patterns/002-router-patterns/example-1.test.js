@@ -1,3 +1,5 @@
+"use strict";
+
 import { responder, hikes } from './example-1.js';
 
 describe('Responder Function', () => {
