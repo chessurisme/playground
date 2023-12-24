@@ -16,3 +16,27 @@ let fruits = [
 
 let randomFruit = () =>
   fruits[Math.floor(Math.random() * fruits.length)];
+
+let responses = [
+  {
+    command: /^list fruits$/,
+    response: () => fruits.join('\n')
+  },
+  {
+    command: /^recommend fruit$/,
+    response: () => `I recommend ${randomFruit()}`
+  },
+  {
+    command: /^add fruit (.+)$/,
+    response: ([fruit]) => {
+      fruits.push(fruit);
+      return `Added ${fruit}!`;
+    }
+  },
+  {
+    command: /^(.*)/,
+    response: ([message]) =>
+      `Sorry, I don't understand "${message}".`
+  }
+]
+
