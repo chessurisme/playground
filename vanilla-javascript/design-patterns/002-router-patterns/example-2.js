@@ -40,3 +40,12 @@ let responses = [
   }
 ]
 
+let responder = (message) => {
+  let { command, response } = responses
+    .find(({ command, response }) =>
+      command.test(message)
+    );
+  return response(
+    command.exec(message).slice(1)
+  );
+};
