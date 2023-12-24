@@ -34,6 +34,15 @@ let responses = [
     }
   },
   {
+    command: /^remove fruit (.+)$/,
+    response: ([fruit]) => {
+      let index = fruits.indexOf(fruit);
+      return index > -1 ? 
+        (fruits.splice(index, 1), `Removed ${fruit}!`) 
+        : `Fruit ${fruit} not found.`;
+    }
+  },
+  {
     command: /^(.*)/,
     response: ([message]) =>
       `Sorry, I don't understand "${message}".`
@@ -54,5 +63,7 @@ export { responder, fruits };
 
 console.log(responder('list fruits'));
 console.log(responder('recommend fruit'));
-console.log(responder('add fruit blueberry'));
+console.log(responder('add fruit papaya'));
+console.log(responder('remove fruit papaya'));
+console.log(responder('remove fruit papaya'));
 console.log(responder('what is your favorite?'));
