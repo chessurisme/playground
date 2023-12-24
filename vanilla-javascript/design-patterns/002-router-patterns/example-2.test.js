@@ -20,7 +20,7 @@ describe('Responder Function', () => {
 
   test('Recommend Fruit Command', () => {
     const result = responder('recommend fruit');
-    expect(fruits).toContain(result);
+    expect(fruits).toContain(/^I recommend (apple | banana | orange | grape | strawberry | pineapple | mango | watermelon | cherry | blueberry | kiwi | coconut | avocado)$/);
   });
 
   test('Unknown Command', () => {
