@@ -14,3 +14,5 @@ let fruits = [
   'avocado'
 ];
 
+let randomFruit = () =>
+  fruits[Math.floor(Math.random() * fruits.length)];
