@@ -35,3 +35,9 @@ class Stack {
     return this.storage[this.count - 1];
   }
 }
+
+const myStack = new Stack();
+
+myStack.push('apple');
+myStack.push('mango')
+console.log(myStack.peek());
