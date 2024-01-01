@@ -19,7 +19,9 @@ class Stack {
 
   // Removes and returns the value at the end of the stack
   pop(){
-    this.count == 0 ? undefined : null;
+    if (this.count == 0) {
+      return undefined;
+    }
 
     this.count--;
     const result = this.storage[this.count];
