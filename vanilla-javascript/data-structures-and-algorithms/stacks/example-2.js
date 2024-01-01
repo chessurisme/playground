@@ -4,11 +4,12 @@ class Stack {
   constructor(){
     this.count = 0;
     this.storage = {};
-    this.push = push();
-    this.pop = pop();
-    this.size = size();
-    this.peek = peek();
+    this.push = this.push.bind(this);
+    this.pop = this.pop.bind(this);
+    this.size = this.size.bind(this);
+    this.peek = this.peek.bind(this);
   }
+  
 
   // Adds a value onto the end  of the stack
   push(value){
