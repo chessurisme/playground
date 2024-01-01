@@ -42,5 +42,12 @@ class Stack {
 const myStack = new Stack();
 
 myStack.push('apple');
-myStack.push('mango')
+myStack.push('mango');
+console.log(myStack.peek());
+console.log(myStack.pop());
+console.log(myStack.peek());
+myStack.push('grapes');
+console.log(myStack.peek());
+console.log(myStack.size());
+console.log(myStack.pop());
 console.log(myStack.peek());
